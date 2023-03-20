@@ -1,0 +1,18 @@
+python 4_train.py --experiments_path /home/bryant/experiments \
+                  --experiment_name Spell-Correction \
+                  --run_name distilbert-base-cased-tokenCLS-1 \
+                  --model_path models/best_model \
+                  --train_file program_data/train/dataset.csv \
+                  --validation_file program_data/validation/dataset.csv \
+                  --test_file program_data/test/dataset.csv \
+                  --vocab_file program_data/vocab_file.txt \
+                  --log_file train.log \
+                  --pretrained_model_name_or_path distilbert-base-cased \
+                  --batch_size 16 \
+                  --learning_rate 1e-4 \
+                  --epochs 10 \
+                  --max_length 256 \
+                  --warmup_ratio 0.0 \
+                  --max_norm 1.0 \
+                  --accum_steps 1 \
+                  --seed 2330

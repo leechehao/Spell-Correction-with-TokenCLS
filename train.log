@@ -1,0 +1,103 @@
+Epoch: [1][1/11159] Loss: 8.9864(8.9864) Grad: 4.6421 LR: 0.00010000
+Epoch: [1][2500/11159] Loss: 0.1676(0.4823) Grad: 0.7851 LR: 0.00009776
+Epoch: [1][5000/11159] Loss: 0.0387(0.2948) Grad: 0.7023 LR: 0.00009552
+Epoch: [1][7500/11159] Loss: 0.1082(0.2208) Grad: 0.7408 LR: 0.00009328
+Epoch: [1][10000/11159] Loss: 0.0450(0.1795) Grad: 0.5629 LR: 0.00009104
+Epoch: [1][11159/11159] Loss: 0.0032(0.1656) Grad: 0.1416 LR: 0.00009000
+Training Duration: 1061.236 sec
+Validation Loss: 0.0666
+Validation Accuracy: 0.8545
+Validation Duration: 59.020 sec
+Epoch: [2][1/11159] Loss: 0.0921(0.0921) Grad: 0.7010 LR: 0.00009000
+Epoch: [2][2500/11159] Loss: 0.0142(0.0315) Grad: 0.5197 LR: 0.00008776
+Epoch: [2][5000/11159] Loss: 0.0280(0.0308) Grad: 1.1814 LR: 0.00008552
+Epoch: [2][7500/11159] Loss: 0.0165(0.0293) Grad: 0.5905 LR: 0.00008328
+Epoch: [2][10000/11159] Loss: 0.0186(0.0283) Grad: 0.5101 LR: 0.00008104
+Epoch: [2][11159/11159] Loss: 0.0199(0.0279) Grad: 0.6843 LR: 0.00008000
+Training Duration: 1063.595 sec
+Validation Loss: 0.0587
+Validation Accuracy: 0.8634
+Validation Duration: 58.762 sec
+Epoch: [3][1/11159] Loss: 0.0169(0.0169) Grad: 0.7386 LR: 0.00008000
+Epoch: [3][2500/11159] Loss: 0.0017(0.0153) Grad: 0.2130 LR: 0.00007776
+Epoch: [3][5000/11159] Loss: 0.0181(0.0153) Grad: 0.5037 LR: 0.00007552
+Epoch: [3][7500/11159] Loss: 0.0010(0.0154) Grad: 0.0927 LR: 0.00007328
+Epoch: [3][10000/11159] Loss: 0.0055(0.0154) Grad: 0.3361 LR: 0.00007104
+Epoch: [3][11159/11159] Loss: 0.0478(0.0154) Grad: 0.7928 LR: 0.00007000
+Training Duration: 1109.188 sec
+Validation Loss: 0.0592
+Validation Accuracy: 0.8717
+Validation Duration: 58.899 sec
+Epoch: [4][1/11159] Loss: 0.0118(0.0118) Grad: 0.4521 LR: 0.00007000
+Epoch: [4][2500/11159] Loss: 0.0127(0.0093) Grad: 1.0203 LR: 0.00006776
+Epoch: [4][5000/11159] Loss: 0.0198(0.0095) Grad: 0.3218 LR: 0.00006552
+Epoch: [4][7500/11159] Loss: 0.0033(0.0098) Grad: 0.3814 LR: 0.00006328
+Epoch: [4][10000/11159] Loss: 0.0004(0.0099) Grad: 0.5148 LR: 0.00006104
+Epoch: [4][11159/11159] Loss: 0.0486(0.0099) Grad: 1.2011 LR: 0.00006000
+Training Duration: 1063.385 sec
+Validation Loss: 0.0598
+Validation Accuracy: 0.8800
+Validation Duration: 58.757 sec
+Epoch: [5][1/11159] Loss: 0.0004(0.0004) Grad: 0.0288 LR: 0.00006000
+Epoch: [5][2500/11159] Loss: 0.0003(0.0062) Grad: 0.0150 LR: 0.00005776
+Epoch: [5][5000/11159] Loss: 0.0009(0.0066) Grad: 0.0598 LR: 0.00005552
+Epoch: [5][7500/11159] Loss: 0.0005(0.0068) Grad: 0.0308 LR: 0.00005328
+Epoch: [5][10000/11159] Loss: 0.0017(0.0068) Grad: 0.3278 LR: 0.00005104
+Epoch: [5][11159/11159] Loss: 0.0570(0.0068) Grad: 1.1335 LR: 0.00005000
+Training Duration: 1063.513 sec
+Validation Loss: 0.0588
+Validation Accuracy: 0.8828
+Validation Duration: 58.763 sec
+Epoch: [6][1/11159] Loss: 0.0013(0.0013) Grad: 0.0925 LR: 0.00005000
+Epoch: [6][2500/11159] Loss: 0.0019(0.0044) Grad: 0.3511 LR: 0.00004776
+Epoch: [6][5000/11159] Loss: 0.0075(0.0043) Grad: 0.2429 LR: 0.00004552
+Epoch: [6][7500/11159] Loss: 0.0019(0.0044) Grad: 0.3113 LR: 0.00004328
+Epoch: [6][10000/11159] Loss: 0.0007(0.0045) Grad: 0.0463 LR: 0.00004104
+Epoch: [6][11159/11159] Loss: 0.0006(0.0045) Grad: 0.0530 LR: 0.00004000
+Training Duration: 1063.443 sec
+Validation Loss: 0.0623
+Validation Accuracy: 0.8864
+Validation Duration: 58.908 sec
+Epoch: [7][1/11159] Loss: 0.0001(0.0001) Grad: 0.0051 LR: 0.00004000
+Epoch: [7][2500/11159] Loss: 0.0062(0.0026) Grad: 0.5869 LR: 0.00003776
+Epoch: [7][5000/11159] Loss: 0.0001(0.0027) Grad: 0.0134 LR: 0.00003552
+Epoch: [7][7500/11159] Loss: 0.0002(0.0027) Grad: 0.0116 LR: 0.00003328
+Epoch: [7][10000/11159] Loss: 0.0002(0.0027) Grad: 0.0252 LR: 0.00003104
+Epoch: [7][11159/11159] Loss: 0.0006(0.0027) Grad: 0.1132 LR: 0.00003000
+Training Duration: 1063.568 sec
+Validation Loss: 0.0622
+Validation Accuracy: 0.8917
+Validation Duration: 58.765 sec
+Epoch: [8][1/11159] Loss: 0.0002(0.0002) Grad: 0.0131 LR: 0.00003000
+Epoch: [8][2500/11159] Loss: 0.0008(0.0014) Grad: 0.0898 LR: 0.00002776
+Epoch: [8][5000/11159] Loss: 0.0007(0.0014) Grad: 0.2691 LR: 0.00002552
+Epoch: [8][7500/11159] Loss: 0.0004(0.0015) Grad: 0.0722 LR: 0.00002328
+Epoch: [8][10000/11159] Loss: 0.0001(0.0015) Grad: 0.0058 LR: 0.00002104
+Epoch: [8][11159/11159] Loss: 0.0002(0.0015) Grad: 0.0288 LR: 0.00002000
+Training Duration: 1063.697 sec
+Validation Loss: 0.0634
+Validation Accuracy: 0.8939
+Validation Duration: 58.918 sec
+Epoch: [9][1/11159] Loss: 0.0002(0.0002) Grad: 0.0462 LR: 0.00002000
+Epoch: [9][2500/11159] Loss: 0.0001(0.0007) Grad: 0.0126 LR: 0.00001776
+Epoch: [9][5000/11159] Loss: 0.0000(0.0008) Grad: 0.0012 LR: 0.00001552
+Epoch: [9][7500/11159] Loss: 0.0219(0.0008) Grad: 0.8322 LR: 0.00001328
+Epoch: [9][10000/11159] Loss: 0.0004(0.0007) Grad: 0.0688 LR: 0.00001104
+Epoch: [9][11159/11159] Loss: 0.0000(0.0007) Grad: 0.0031 LR: 0.00001000
+Training Duration: 1060.497 sec
+Validation Loss: 0.0633
+Validation Accuracy: 0.8969
+Validation Duration: 58.790 sec
+Epoch: [10][1/11159] Loss: 0.0001(0.0001) Grad: 0.0124 LR: 0.00001000
+Epoch: [10][2500/11159] Loss: 0.0000(0.0004) Grad: 0.0013 LR: 0.00000776
+Epoch: [10][5000/11159] Loss: 0.0000(0.0004) Grad: 0.0036 LR: 0.00000552
+Epoch: [10][7500/11159] Loss: 0.0002(0.0003) Grad: 0.0342 LR: 0.00000328
+Epoch: [10][10000/11159] Loss: 0.0001(0.0003) Grad: 0.0037 LR: 0.00000104
+Epoch: [10][11159/11159] Loss: 0.0017(0.0003) Grad: 0.0928 LR: 0.00000000
+Training Duration: 1063.686 sec
+Validation Loss: 0.0646
+Validation Accuracy: 0.8980
+Validation Duration: 58.898 sec
+Test Loss: 0.0733
+Test Accuracy: 0.8943
+Test Duration: 117.684 sec
