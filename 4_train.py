@@ -200,18 +200,19 @@ def main():
             epochs.write(f"Validation Accuracy: {val_accuracy:.4f}", file=log_file)
             epochs.write(f"Validation Duration: {val_duration:.3f} sec", file=log_file)
 
+            if val_accuracy > best_val_accuracy:
+                model.save_pretrained(args.model_path)
+                best_val_accuracy = val_accuracy
+
             mlflow.log_metrics(
                 {
                     "train_loss": train_losses.avg,
                     "val_loss": val_loss,
                     "val_accuracy": val_accuracy,
+                    "best_val_accuracy": best_val_accuracy,
                 },
                 step=epoch,
             )
-
-            if val_accuracy > best_val_accuracy:
-                model.save_pretrained(args.model_path)
-                best_val_accuracy = val_accuracy
 
         ####################################
         ##########      Test      ##########
