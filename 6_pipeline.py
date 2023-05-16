@@ -3,6 +3,8 @@ from typing import Optional
 import torch
 from transformers import AutoTokenizer, AutoModelForTokenClassification
 
+UNK_TOKEN = "[UNK]"
+
 
 class TokenCLSForSpellCorrectionPipeline:
     def __init__(
@@ -15,8 +17,17 @@ class TokenCLSForSpellCorrectionPipeline:
         self.tokenizer = AutoTokenizer.from_pretrained(pretrained_model_name_or_path)
         self.model = AutoModelForTokenClassification.from_pretrained(pretrained_model_name_or_path).to(self.device)
         self.model.eval()
+        self.unk_token_id = None
         with open(vocab_file, "r", encoding="utf-8") as f:
             self.index_to_word = {i: line.strip() for i, line in enumerate(f.readlines())}
+
+        for idx, word in self.index_to_word.items():
+            if word == UNK_TOKEN:
+                self.unk_token_id = idx
+                break
+
+        if self.unk_token_id is None:
+            raise ValueError("Vocabulary file does not appear unknown token !")
 
     def __call__(self, sentence: str) -> str:
         words = sentence.split(" ")
@@ -36,7 +47,7 @@ class TokenCLSForSpellCorrectionPipeline:
         previous_word_idx = 0
         for pred_idx, word_idx in zip(pred_ids, inputs.word_ids()):
             if word_idx is not None and word_idx == previous_word_idx:
-                if pred_idx == 0:
+                if pred_idx == self.unk_token_id:
                     outputs.append(words[word_idx])
                 else:
                     outputs.append(self.index_to_word[pred_idx])

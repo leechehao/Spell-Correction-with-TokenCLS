@@ -44,7 +44,7 @@ def evaluate(model, dataloader, device):
         ground_true.extend(
             [
                 [idx for idx in seq_idx if idx != IGNORE_INDEX]
-                for seq_idx in batch[LABELS].numpy().tolist()
+                for seq_idx in batch[LABELS].cpu().numpy().tolist()
             ]
         )
         predict.extend(

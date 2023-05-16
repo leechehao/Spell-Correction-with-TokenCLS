@@ -2,3 +2,4 @@ _*
 .vscode
 models
 *_data
+*.log

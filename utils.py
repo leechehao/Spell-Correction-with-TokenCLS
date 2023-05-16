@@ -12,6 +12,7 @@ TYPO_WORDS = "typo_words"
 MAX_LENGTH = "max_length"
 LABELS = "labels"
 IGNORE_INDEX = -100
+UNK_TOKEN = "[UNK]"
 
 
 class FeatureEncoder(object):
@@ -82,8 +83,17 @@ class TokenCLSForSpellCorrectionAPI(PythonModel):
             self.model = self.model.cuda()
 
         self.model.eval()
+        self.unk_token_id = None
         with open(context.artifacts["vocab_file"], "r", encoding="utf-8") as f:
             self.index_to_word = {i: line.strip() for i, line in enumerate(f.readlines())}
+
+        for idx, word in self.index_to_word.items():
+            if word == UNK_TOKEN:
+                self.unk_token_id = idx
+                break
+
+        if self.unk_token_id is None:
+            raise ValueError("Vocabulary file does not appear unknown token !")
 
     def predict(self, context: PythonModelContext, df: pd.DataFrame) -> pd.DataFrame:
         data = df.text.apply(lambda x: x.split(" ")).values.tolist()
@@ -98,7 +108,7 @@ class TokenCLSForSpellCorrectionAPI(PythonModel):
             torch.cuda.empty_cache()
             for key in inputs.keys():
                 inputs[key] = inputs[key].to(self.model.device.index)
-                
+
         with torch.no_grad():
             prediction = torch.argmax(self.model(**inputs).logits, dim=-1).cpu().numpy()
 
@@ -109,7 +119,7 @@ class TokenCLSForSpellCorrectionAPI(PythonModel):
 
             for pred_idx, word_idx in zip(pred_ids, inputs.word_ids(batch_index=i)):
                 if word_idx is not None and word_idx == previous_word_idx:
-                    if pred_idx == 0:
+                    if pred_idx == self.unk_token_id:
                         outputs.append(data[i][word_idx])
                     else:
                         outputs.append(self.index_to_word[pred_idx])

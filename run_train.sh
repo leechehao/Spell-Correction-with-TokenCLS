@@ -1,5 +1,5 @@
-python 4_train.py --experiments_path /home/bryant/experiments \
-                  --experiment_name Spell-Correction \
+python 4_train.py --experiments_path /home/mlflow-experiments \
+                  --experiment_name Spell-Correction-TokenCLS \
                   --run_name distilbert-base-cased-tokenCLS-1 \
                   --model_path models/best_model \
                   --train_file program_data/train/dataset.csv \
